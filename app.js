@@ -13,6 +13,7 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
+    streetViewControl: false,
     center: points[0]
   });
 
