@@ -78,3 +78,12 @@ function initMap() {
     infowindow.open(map,markers[2]);
   });
 }
+
+
+var myKey = "AIzaSyB3mNbL_Bme8Cu3F1Zhtj-A5fADrdYrYlU";
+    function loadScript() {
+         var script = document.createElement('script');
+         script.type = 'text/javascript';
+         script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=false&callback=initialize";
+         document.body.appendChild(script);
+}

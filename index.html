@@ -6,8 +6,17 @@
       html, body { height: 100%; margin: 0; padding: 0; }
       #map { height: 100%; }
     </style>
+    <script type="text/javascript">
+        var myKey = "AIzaSyB3mNbL_Bme8Cu3F1Zhtj-A5fADrdYrYlU";
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=false&callback=initMap";
+            document.body.appendChild(script);
+        }
+    </script>
   </head>
-  <body>
+  <body onload="loadScript()">
     <!--<div id="floating-panel">
       <button id="drop" onclick="drop()">Drop Markers</button>
      </div>-->
@@ -15,8 +24,8 @@
     <script src = "https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" defer="defer"></script>
     <script src = "infobubble.js" type="text/javascript" defer="defer"></script>  
     <script src = "app.js" type="text/javascript" defer="defer"></script>      
-    <script async defer
+    <!--<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3mNbL_Bme8Cu3F1Zhtj-A5fADrdYrYlU&callback=initMap">
-    </script>
+    </script>-->
   </body>
 </html>
