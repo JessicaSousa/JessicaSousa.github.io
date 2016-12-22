@@ -69,12 +69,12 @@ function initMap() {
   });
 
   google.maps.event.addListener(markers[1], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.ufma.br/portalUFMA/arquivo/tf38dVScnFBaquj.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='images/UFMA_50anos.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[1]);
   });
 
   google.maps.event.addListener(markers[2], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='images/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[2]);
   });
   
