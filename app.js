@@ -28,7 +28,7 @@ function initMap() {
   }
 
 
-  var contentVideo = "<iframe width='425' height='344' src='http://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
+  var contentVideo = "<iframe width='425' height='344' src='https://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -43,7 +43,7 @@ function initMap() {
       'a cidade também é a porta de entrada para o Parque Nacional dos Lençóis Maranhenses, que atrai turistas do Brasil e do exterior. São Luís também '+
       'foi a cidade de grandes escritores como Aluísio de Azevedo, Gonçalves Dias e Graça Aranha. Além disso, a capital também é conhecida pelos ritmos '+
       'como tambor-de-crioula, reggae e bumba-meu-boi. '+
-      '<p><b>Fonte</b>: <a href="http://seuhistory.com/hoje-na-historia/e-fundada-cidade-de-sao-luis-capital-do-maranhao">'+
+      '<p><b>Fonte</b>: <a href="https://seuhistory.com/hoje-na-historia/e-fundada-cidade-de-sao-luis-capital-do-maranhao">'+
       'Seu History</a> '+
       '(last visited December 22, 2016).</p>'+
       '</div>'+
@@ -69,12 +69,12 @@ function initMap() {
   });
 
   google.maps.event.addListener(markers[1], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.ufma.br/portalUFMA/arquivo/tf38dVScnFBaquj.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='https://www.ufma.br/portalUFMA/arquivo/tf38dVScnFBaquj.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[1]);
   });
 
   google.maps.event.addListener(markers[2], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='https://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[2]);
   });
 }
