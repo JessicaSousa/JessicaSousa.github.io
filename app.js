@@ -28,7 +28,7 @@ function initMap() {
   }
 
 
-  var contentVideo = "<iframe width='425' height='344' src='http://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
+  var contentVideo = "<iframe width='425' height='344' src='https://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
