@@ -2,8 +2,8 @@
 var points = [
   {lat:-2.53, lng:-44.302778}, //algum lugar de são luís
   {lat: -2.552690,lng: -44.306573}, //UFMA
-  {lat: -2.5761116,lng: -44.2113697} //UEMA
-  //{lat: -2.5677811,lng: -44.2064132} //Casa
+  {lat: -2.5761116,lng: -44.2113697}, //UEMA
+  {lat: -2.5677811,lng: -44.2064132} //Casa
 ];
 
 var markers = [];
@@ -13,16 +13,18 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
+    maxZoom: 13,
     streetViewControl: false,
-    center: points[0]
+    center: {lat:-2.536623,lng: -44.253584}
   });
 
-  for(var i = 0; i < 3; i++){
+
+  for(var i = 0; i < points.length - 1; i++){
     markers[i] = new google.maps.Marker({
       map: map,
       draggable: true,
       animation: google.maps.Animation.DROP,
-      title: 'A Customized InfoWindow Marker',
+      title: (i + 1) + 'º InfoWindow',
       position: points[i]
     });
   }
@@ -75,4 +77,35 @@ function initMap() {
     infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[2]);
   });
+  
+  
+  var image = {
+    url: 'images/home.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(50, 50),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 50)
+  };
+
+  var shape = {
+    coords: [1, 1, 1, 50, 48, 50, 48, 1],
+    type: 'poly'
+  };
+  
+  markers[3] = new google.maps.Marker({
+      position: points[3],
+      map: map,
+      icon: image,
+      shape: shape,
+      animation: google.maps.Animation.DROP
+    });
+    
+    
+  google.maps.event.addListener(markers[3], 'click', function() {
+    infowindow.setContent("<div style='height:150;width:200px;'><img src='images/kokoro-connect-HD.jpg' style='width:200px;height:150px;''></div>"); 
+    infowindow.open(map,markers[3]);
+  });
+
 }
