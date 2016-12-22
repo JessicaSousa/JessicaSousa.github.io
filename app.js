@@ -28,7 +28,7 @@ function initMap() {
   }
 
 
-  var contentVideo = "<iframe width='425' height='344' src='https://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
+  var contentVideo = "<iframe width='425' height='344' src='http://www.youtube.com/embed/5CIHvaFo8wY'  allowfullscreen='allowfullscreen' frameborder='0' ></iframe>";
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -69,12 +69,12 @@ function initMap() {
   });
 
   google.maps.event.addListener(markers[1], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='https://www.ufma.br/portalUFMA/arquivo/tf38dVScnFBaquj.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.ufma.br/portalUFMA/arquivo/tf38dVScnFBaquj.jpg' style='width:70px;height:70px;''><br>Coordenadas: ("+markers[1].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[1]);
   });
 
   google.maps.event.addListener(markers[2], 'click', function() {
-    infowindow.setContent("<div style='height:100px;width:210px;'><img src='https://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
+    infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[2]);
   });
 }
