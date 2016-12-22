@@ -6,7 +6,6 @@ var points = [
   //{lat: -2.5677811,lng: -44.2064132} //Casa
 ];
 
-
 var markers = [];
 
 var map;
@@ -43,7 +42,7 @@ function initMap() {
       'a cidade também é a porta de entrada para o Parque Nacional dos Lençóis Maranhenses, que atrai turistas do Brasil e do exterior. São Luís também '+
       'foi a cidade de grandes escritores como Aluísio de Azevedo, Gonçalves Dias e Graça Aranha. Além disso, a capital também é conhecida pelos ritmos '+
       'como tambor-de-crioula, reggae e bumba-meu-boi. '+
-      '<p><b>Fonte</b>: <a href="https://seuhistory.com/hoje-na-historia/e-fundada-cidade-de-sao-luis-capital-do-maranhao">'+
+      '<p><b>Fonte</b>: <a href="http://seuhistory.com/hoje-na-historia/e-fundada-cidade-de-sao-luis-capital-do-maranhao">'+
       'Seu History</a> '+
       '(last visited December 22, 2016).</p>'+
       '</div>'+
@@ -62,8 +61,6 @@ function initMap() {
     }
   });
 
-
-
   var infowindow = new google.maps.InfoWindow({
     //content: contentString
   });
@@ -77,13 +74,4 @@ function initMap() {
     infowindow.setContent("<div style='height:100px;width:210px;'><img src='http://www.uema.br/wp-content/uploads/2015/01/logo_UEMA.png' style='width:200px;height:70px;''><br>Coordenadas: ("+markers[2].getPosition().toUrlValue(6)+") </div>"); 
     infowindow.open(map,markers[2]);
   });
-}
-
-
-var myKey = "AIzaSyB3mNbL_Bme8Cu3F1Zhtj-A5fADrdYrYlU";
-    function loadScript() {
-         var script = document.createElement('script');
-         script.type = 'text/javascript';
-         script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=false&callback=initialize";
-         document.body.appendChild(script);
 }
