@@ -2,8 +2,7 @@
 var points = [
   {lat:-2.53, lng:-44.302778}, //algum lugar de são luís
   {lat: -2.552690,lng: -44.306573}, //UFMA
-  {lat: -2.5761116,lng: -44.2113697}, //UEMA
-  {lat: -2.5677811,lng: -44.2064132} //Casa
+  {lat: -2.5761116,lng: -44.2113697} //UEMA
 ];
 
 var markers = [];
@@ -78,31 +77,5 @@ function initMap() {
     infowindow.open(map,markers[2]);
   });
   
-  
-  var image = {
-    url: 'images/home.png',
-    size: new google.maps.Size(50, 50),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 50)
-  };
-
-  var shape = {
-    coords: [1, 1, 1, 50, 48, 50, 48, 1],
-    type: 'poly'
-  };
-  
-  markers[3] = new google.maps.Marker({
-      position: points[3],
-      map: map,
-      icon: image,
-      shape: shape,
-      animation: google.maps.Animation.DROP
-    });
-    
-    
-  google.maps.event.addListener(markers[3], 'click', function() {
-    infowindow.setContent("<div style='height:150;width:200px;'><img src='images/kokoro-connect-HD.jpg' style='width:200px;height:150px;''></div>"); 
-    infowindow.open(map,markers[3]);
-  });
 
 }
